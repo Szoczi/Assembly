@@ -1,0 +1,15 @@
+C:\Users\szoto\OneDrive\Documents\csharp_masm_dll-master\csharp_masm_dll-master\sharprdrand\bin\x64\Release\sharprdrand.exe.config
+C:\Users\szoto\OneDrive\Documents\csharp_masm_dll-master\csharp_masm_dll-master\sharprdrand\bin\x64\Release\sharprdrand.exe
+C:\Users\szoto\OneDrive\Documents\csharp_masm_dll-master\csharp_masm_dll-master\sharprdrand\bin\x64\Release\sharprdrand.pdb
+C:\Users\szoto\OneDrive\Documents\csharp_masm_dll-master\csharp_masm_dll-master\sharprdrand\obj\x64\Release\gui.csproj.AssemblyReference.cache
+C:\Users\szoto\OneDrive\Documents\csharp_masm_dll-master\csharp_masm_dll-master\sharprdrand\obj\x64\Release\MainWindow.g.cs
+C:\Users\szoto\OneDrive\Documents\csharp_masm_dll-master\csharp_masm_dll-master\sharprdrand\obj\x64\Release\App.g.cs
+C:\Users\szoto\OneDrive\Documents\csharp_masm_dll-master\csharp_masm_dll-master\sharprdrand\obj\x64\Release\sharprdrand_MarkupCompile.cache
+C:\Users\szoto\OneDrive\Documents\csharp_masm_dll-master\csharp_masm_dll-master\sharprdrand\obj\x64\Release\sharprdrand_MarkupCompile.lref
+C:\Users\szoto\OneDrive\Documents\csharp_masm_dll-master\csharp_masm_dll-master\sharprdrand\obj\x64\Release\MainWindow.baml
+C:\Users\szoto\OneDrive\Documents\csharp_masm_dll-master\csharp_masm_dll-master\sharprdrand\obj\x64\Release\sharprdrand.g.resources
+C:\Users\szoto\OneDrive\Documents\csharp_masm_dll-master\csharp_masm_dll-master\sharprdrand\obj\x64\Release\sharprdrand.Properties.Resources.resources
+C:\Users\szoto\OneDrive\Documents\csharp_masm_dll-master\csharp_masm_dll-master\sharprdrand\obj\x64\Release\gui.csproj.GenerateResource.cache
+C:\Users\szoto\OneDrive\Documents\csharp_masm_dll-master\csharp_masm_dll-master\sharprdrand\obj\x64\Release\gui.csproj.CoreCompileInputs.cache
+C:\Users\szoto\OneDrive\Documents\csharp_masm_dll-master\csharp_masm_dll-master\sharprdrand\obj\x64\Release\sharprdrand.exe
+C:\Users\szoto\OneDrive\Documents\csharp_masm_dll-master\csharp_masm_dll-master\sharprdrand\obj\x64\Release\sharprdrand.pdb
