@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace sharprdrand
 {
@@ -9,6 +10,11 @@ namespace sharprdrand
     /// </summary>
     public partial class MainWindow : Window
     {
+        bool isEncodedNotDecoded = false;
+        bool isIntegerNotBinary = false;
+        bool isCppNotAsm = false;
+        bool isLeftDivideEnabled = false;
+        bool isRightDivideEnabled = false;
         public MainWindow()
         {
             InitializeComponent();
@@ -17,8 +23,10 @@ namespace sharprdrand
             {
                 // Display the generated number in the TextBlock
                 
-                textBox1.Text = getnumber().ToString();
-                textBox2.Text = CppFunction(5).ToString();
+                //textBox1.Text = getnumber().ToString();
+                //textBox2.Text = CppFunction(5).ToString();
+
+
             }
             catch (Exception ex)
             {
@@ -27,15 +35,132 @@ namespace sharprdrand
             }
 
         }
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void OnLeftDivideButtonClick(object sender, RoutedEventArgs e)
         {
-            string text1 = textBox1.Text;
-            string text2 = textBox2.Text;
-            MessageBox.Show($"Text 1: {text1}\nText 2: {text2}");
+            if (isLeftDivideEnabled)
+            {
+                LeftBarButton.Opacity = 0.5;
+            }
+            else
+            {
+                LeftBarButton.Opacity = 1;
+            }
+            isLeftDivideEnabled = !isLeftDivideEnabled;
         }
+        private void OnRightDivideButtonClick(object sender, RoutedEventArgs e)
+        {
+            if (isRightDivideEnabled)
+            {
+                RightBarButton.Opacity = 0.5;
+            }
+            else
+            {
+                RightBarButton.Opacity = 1;
+            }
+            isRightDivideEnabled = !isRightDivideEnabled;
+        }
+
+        private void ToggleButtonOpacity(Button activeButton, Button inactiveButton)
+        {
+            activeButton.Opacity = 1;
+            inactiveButton.Opacity = 0.5;
+        }
+
+        private void OnEncodeButtonClick(object sender, RoutedEventArgs e)
+        {
+            if (isEncodedNotDecoded)
+            {
+                ToggleButtonOpacity(encodeButton, decodeButton);
+            }
+            else
+            {
+                ToggleButtonOpacity(decodeButton, encodeButton);
+            }
+            isEncodedNotDecoded = !isEncodedNotDecoded;
+        }
+
+        private void OnDecodeButtonClick(object sender, RoutedEventArgs e)
+        {
+            if (!isEncodedNotDecoded)
+            {
+                ToggleButtonOpacity(encodeButton, decodeButton);
+            }
+            else
+            {
+                ToggleButtonOpacity(decodeButton, encodeButton);
+            }
+            isEncodedNotDecoded = !isEncodedNotDecoded;
+        }
+
+        private void OnBinaryOutputButtonClick(object sender, RoutedEventArgs e)
+        {
+            if (!isIntegerNotBinary)
+            {
+                ToggleButtonOpacity(Binary_Output, Integer_Output);
+            }
+            else
+            {
+                ToggleButtonOpacity(Integer_Output, Binary_Output);
+            }
+            isIntegerNotBinary = !isIntegerNotBinary;
+        }
+
+        private void OnIntegerOutputButtonClick(object sender, RoutedEventArgs e)
+        {
+            if (isIntegerNotBinary)
+            {
+                ToggleButtonOpacity(Binary_Output, Integer_Output);
+            }
+            else
+            {
+                ToggleButtonOpacity(Integer_Output, Binary_Output);
+            }
+            isIntegerNotBinary = !isIntegerNotBinary;
+        }
+
+        private void OnAsmButtonClick(object sender, RoutedEventArgs e)
+        {
+            if (!isCppNotAsm)
+            {
+                ToggleButtonOpacity(asm, cpp);
+            }
+            else
+            {
+                ToggleButtonOpacity(cpp, asm);
+            }
+            isCppNotAsm = !isCppNotAsm;
+        }
+
+        private void OnCppButtonClick(object sender, RoutedEventArgs e)
+        {
+            if (isCppNotAsm)
+            {
+                ToggleButtonOpacity(asm, cpp);
+            }
+            else
+            {
+                ToggleButtonOpacity(cpp, asm);
+            }
+            isCppNotAsm = !isCppNotAsm;
+        }
+
+
+
+        private void OnButtonRunClick(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Button 2 clicked!");
+            // Add your action here
+        }
+
+
         [DllImport("rdrand.dll", CharSet = CharSet.Unicode, SetLastError = true)]
         private static extern int getnumber(); 
         [DllImport("cppdll.dll")]
-        private static extern int CppFunction(int v);  
+        private static extern int CppFunction(int v);
+
+        private void OnDivideButtonClick(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
